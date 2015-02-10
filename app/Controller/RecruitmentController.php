@@ -5,7 +5,7 @@
 	class RecruitmentController extends AppController
 	{
 		
-		public function recruitment()
+		public function index()
 		{
 			
 		}

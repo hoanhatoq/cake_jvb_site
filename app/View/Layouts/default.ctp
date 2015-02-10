@@ -103,19 +103,19 @@ auto: true
                      <li class="active" ><a href="<?php echo $this->Html->url(array('controller' => 'index', 'action' => 'index')) ?>">Trang chủ</a></li>
                     
                             
-                    <li class="" ><a href="<?php echo $this->Html->url(array('controller' => 'Introduce', 'action' => 'introduce')) ?>">Giới thiệu</a></li>
+                    <li class="" ><a href="<?php echo $this->Html->url(array('controller' => 'Introduce', 'action' => 'index')) ?>">Giới thiệu</a></li>
                     
                             
-                    <li class="" ><a href="<?php echo $this->Html->url(array('controller' => 'Services', 'action' => 'services')) ?>">Dịch vụ</a></li>
+                    <li class="" ><a href="<?php echo $this->Html->url(array('controller' => 'Services', 'action' => 'index')) ?>">Dịch vụ</a></li>
                     
                             
                     <li class="" ><a href="<?php echo $this->Html->url(array('controller' => 'Articles', 'action' => 'index')) ?>">Tin tức</a></li>
                     
                             
-                    <li class="" ><a href="<?php echo $this->Html->url(array('controller' => 'Recruitment', 'action' => 'recruitment')) ?>">Tuyển dụng</a></li>
+                    <li class="" ><a href="<?php echo $this->Html->url(array('controller' => 'Recruitment', 'action' => 'index')) ?>">Tuyển dụng</a></li>
                     
                             
-                    <li class="" ><a href="<?php echo $this->Html->url(array('controller' => 'Contact_us', 'action' => 'contact_us')) ?>">Liên hệ</a></li>
+                    <li class="" ><a href="<?php echo $this->Html->url(array('controller' => 'Contact_us', 'action' => 'index')) ?>">Liên hệ</a></li>
                     
                     <div class="clear"></div>
             </ul>

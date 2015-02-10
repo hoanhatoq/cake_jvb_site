@@ -1,6 +1,6 @@
 <?php
 	App::uses('AppController', 'Controller');
-	class IndexController extends AppController{	
+	class AboutUsController extends AppController{	
 			
 		public function index(){
 		}
