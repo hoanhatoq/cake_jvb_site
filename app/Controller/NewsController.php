@@ -11,12 +11,12 @@
 
 		/*Khai bao su dung model*/
 		
-		public $uses = array('New');
+		public $uses = array('News');
 
 
 		public function index(){
 
-			$new = $this->Article->find('all');
+			$new = $this->News->find('all');
 			$this->set ('new',$new);
 	
 		}

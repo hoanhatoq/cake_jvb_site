@@ -103,19 +103,19 @@ auto: true
                      <li class="active" ><a href="<?php echo $this->Html->url(array('controller' => 'index', 'action' => 'index')) ?>">Trang chủ</a></li>
                     
                             
-                    <li class="" ><a href="<?php echo $this->Html->url(array('controller' => 'Introduce', 'action' => 'index')) ?>">Giới thiệu</a></li>
+                    <li class="" ><a href="<?php echo $this->Html->url(array('controller' => 'about_us', 'action' => 'index')) ?>">Giới thiệu</a></li>
+                
+                            
+                    <li class="" ><a href="<?php echo $this->Html->url(array('controller' => 'service', 'action' => 'index')) ?>">Dịch vụ</a></li>
                     
                             
-                    <li class="" ><a href="<?php echo $this->Html->url(array('controller' => 'Services', 'action' => 'index')) ?>">Dịch vụ</a></li>
+                    <li class="" ><a href="<?php echo $this->Html->url(array('controller' => 'news', 'action' => 'index')) ?>">Tin tức</a></li>
                     
                             
-                    <li class="" ><a href="<?php echo $this->Html->url(array('controller' => 'Articles', 'action' => 'index')) ?>">Tin tức</a></li>
+                    <li class="" ><a href="<?php echo $this->Html->url(array('controller' => 'recruitment', 'action' => 'index')) ?>">Tuyển dụng</a></li>
                     
                             
-                    <li class="" ><a href="<?php echo $this->Html->url(array('controller' => 'Recruitment', 'action' => 'index')) ?>">Tuyển dụng</a></li>
-                    
-                            
-                    <li class="" ><a href="<?php echo $this->Html->url(array('controller' => 'Contact_us', 'action' => 'index')) ?>">Liên hệ</a></li>
+                    <li class="" ><a href="<?php echo $this->Html->url(array('controller' => 'contact_us', 'action' => 'index')) ?>">Liên hệ</a></li>
                     
                     <div class="clear"></div>
             </ul>

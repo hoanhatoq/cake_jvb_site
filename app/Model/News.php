@@ -1,7 +1,7 @@
 <?php
 App::uses('AppModel', 'Model');
 
-	class Articles extends AppModel{
+	class News extends AppModel{
 		
 		/*Khai bao su dung bang*/
 
@@ -9,6 +9,6 @@ App::uses('AppModel', 'Model');
 
 		/*truong khoa trinh cua bang*/
 
-		public $primaryKey = "new_id"; 
+		public $primaryKey = "news_id"; 
 
 	}
