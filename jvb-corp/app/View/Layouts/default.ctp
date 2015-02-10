@@ -87,11 +87,11 @@ auto: true
     </script>
             
             <div class="lang">
-                    <a href="#">
+                    <a href="<?php echo Router::url('/', true);?>">
                         <?php echo $this->Html->image('fl_jp.jpg', array('class'=> 'flag_jp', 'style'=>'width:40px'));?></a>
-                    <a href="#"><?php echo $this->Html->image('fl_vi.jpg', array('style'=>'width:40px'));?>
-                        </a>
-                    <a href="#"><?php echo $this->Html->image('fl_en.jpg', array('style'=>'width:40px'));?></a>
+                    <a href="<?php echo Router::url('/vi', true);?>"><?php echo $this->Html->image('fl_vi.jpg', array('style'=>'width:40px'));?>
+                        </a>                    
+                    <a href="<?php echo Router::url('/en', true);?>"><?php echo $this->Html->image('fl_en.jpg', array('style'=>'width:40px'));?></a>
             </div>
             <div class="clear"></div>
         </div>
@@ -127,23 +127,23 @@ auto: true
             
         <li>
             <div class="service_slide">
-                <div class="title">Phát triển ứng dụng Mobile</div>
-                Công ty chúng tôi cung cấp dịch vụ phát triển ứng dụng Mobile trên nền iOS và Android.
-Đội ngũ nhân viên của chúng tôi tư vấn và phát triển dựa trên nhu cầu thực tế của khách hàng.
-<div class="readmore"><a href="#">Xem thêm</a></div>
+                <div class="title"><?php echo __('Phát triển ứng dụng Mobile');?></div>
+                <?php echo __('Công ty chúng tôi cung cấp dịch vụ phát triển ứng dụng Mobile trên nền iOS và Android.
+Đội ngũ nhân viên của chúng tôi tư vấn và phát triển dựa trên nhu cầu thực tế của khách hàng.');?>
+<div class="readmore"><a href="#"><?php echo __('Xem thêm');?></a></div>
                 </div>
                 <div class="im_slide">
                     <?php 
-                        echo $this->Html->image('banner2.png', array('class'=> 'lazy', 'alt'=> 'banner_mobile')); 
+                        echo $this->Html->image('banner2.png', array('class'=> 'lazy', 'alt' => 'banner_mobile')); 
                     ?>
                 </div>
             </li>
                     
         <li>
             <div class="service_slide">
-                <div class="title">Phát triển ứng dụng Web</div>
-                Công ty JVB Vietnam cung cấp dịch vụ thiết kế và phát triển ứng dụng Web
-<div class="readmore"><a href="#">Xem thêm</a></div>
+                <div class="title"><?php echo __('Phát triển ứng dụng Web');?></div>
+               <?php echo __('Công ty JVB Vietnam cung cấp dịch vụ thiết kế và phát triển ứng dụng Web');?>
+<div class="readmore"><a href="#"><?php echo __('Xem thêm');?></a></div>
                 </div>
                 <div class="im_slide">
                     <?php 
@@ -154,9 +154,9 @@ auto: true
                     
         <li>
             <div class="service_slide">
-                <div class="title">Nội dung số</div>
-                Công ty JVB Vietnam số hóa thông tin về văn hóa, môi trường kinh doanh tại Việt Nam để quảng bá cho khách hàng Nhật
-<div class="readmore"><a href="">Xem thêm</a></div>
+                <div class="title"><?php echo __('Nội dung số');?></div>
+                <?php echo __('Công ty JVB Vietnam số hóa thông tin về văn hóa, môi trường kinh doanh tại Việt Nam để quảng bá cho khách hàng Nhật');?>
+<div class="readmore"><a href=""><?php echo __('Xem thêm');?></a></div>
                 </div>
                 <div class="im_slide">
                     <?php 
@@ -173,9 +173,9 @@ auto: true
     <marquee behavior="scroll" direction="left">
         <ul>
                     
-            <li><a href="">Tuyển phiên dịch viên tiếng Nhật</a></li>
+            <li><a href=""><?php echo __('Tuyển phiên dịch viên tiếng Nhật');?></a></li>
                     
-            <li><a href="">Tuyển lập trình viên Mobile</a></li>
+            <li><a href=""><?php echo __('Tuyển lập trình viên Mobile');?></a></li>
 
         </ul>
     </marquee>
@@ -197,8 +197,8 @@ auto: true
         </div>
         <div class="footer">
             <div class="wrapper_footer">
-            <div class="company_name">Công ty cổ phần JVB Việt Nam</div>
-            <div class="company_address">Số 32-34, Đường Đặng Văn Ngữ, Phường Phương Liên, Quận Đống Đa, Thành phố Hà Nội, Việt Nam</div>
+            <div class="company_name"><?php echo __('Công ty cổ phần JVB Việt Nam');?></div>
+            <div class="company_address"><?php echo __('Số 32-34, Đường Đặng Văn Ngữ, Phường Phương Liên, Quận Đống Đa, Thành phố Hà Nội, Việt Nam');?></div>
             <div class="social">
             <a href=" ">
                 <?php echo $this->Html->image('face.png');?></a>
@@ -207,20 +207,11 @@ auto: true
             <a href="">
                 <?php echo $this->Html->image('print.png');?></a>
         </div>
-        <div class="design_by">Copyright©2014 JVB Vietnam.All Rig </div>
+        <div class="design_by"><?php echo __('Copyright©2014 JVB Vietnam. All rights reserved.');?></div>
     </div>       
         </div>
         
       
     </div>
-
-
-            <?php echo $this->Session->flash(); ?>
-
-           
-        
-        
-
-
 </body>
 </html>

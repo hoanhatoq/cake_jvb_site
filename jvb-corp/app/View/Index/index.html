@@ -15,7 +15,7 @@
 </div>
 <div class="select_2">
 <div class="left_se">
-<div class="title_web_app">Đặc điểm của công ty JVBvietnam</div>
+<div class="title_web_app"><?php echo __('Đặc điểm của công ty JVBvietnam'); ?></div>
 <div class="m_left">
 <img  src="img/select_vi.png">
 <div>
@@ -31,6 +31,8 @@
 <div class="title_web_app">Tin tức</div>
 <div class="news_home">
         
+<?php echo $this->Html->link('Arabic', array('language'=>'vie'));?>
+
 <div class="item">
 <a href="#"><img class="lazy" alt='' src='http://jvb-corp.com/sources/utils/timthumb.php?src=http://jvb-corp.com/uploads/.&w=85&h=68&zc=2'/></a>
 <h3><a href=""><?php echo $new[0]['Article']['title'];?> - <span>17/08/14</span></a></h3>
