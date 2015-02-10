@@ -1,0 +1,74 @@
+<div class="content">
+    
+    <div class="center_f">
+        <div class="p_contact"><div class="company_address"><strong>C&ocirc;ng ty cổ phần JVB Việt Nam</strong></div>
+<div class="company_address">Số 32-34, Đường Đặng Văn Ngữ, Phường Phương Li&ecirc;n, Quận Đống Đa, Th&agrave;nh phố H&agrave; Nội, Việt Nam</div></div>
+                <form id="contact" class="contact" method="POST" action="">
+                     <label>Họ tên<font>(<span>*</span>)</font> </label><input class="an" name="name" required type="name" class="col_left" value=""  />
+                    <div class="clear"></div>     
+                    <label>Điện thoại<font>(<span>*</span>)</font></label><input name="phone" required type="name"  value=""  />
+                    <div class="clear"></div>
+                    
+                    <label>Email<font>(<span>*</span>)</font></label><input  name="email" required type="email" value=""  />                           
+                    <div class="clear"></div>
+                    
+                  <label>Tiêu đề<font>(<span>*</span>)</font></label><input class="an" name="title" required type="name" class="col_left" value=""  />
+                    <div class="clear"></div>
+                    <label>Nội dung:</label><textarea class="an" name="content"></textarea>
+                    <div class="clear"></div>
+                     <label>Capcha Ct :</label><input  name="sec_code"  type="text" style="width:100px" />
+                     <img id="siimage" src="http://jvb-corp.com/vscaptcha/" />
+                     <a href="#" id="reload_img" class="mamoi">refresh</a>
+                    <div class="clear"></div> 
+<div class="required_text"><span>(*)</span>Bắt buộc nhập</div> 
+                    <input type="submit" name="btnSubmit" value="Gửi ngay" class="input_submit" />
+                    <input type="reset" name="btnSubmit" value="Làm lại" class="input_reset" />
+                   
+                    <div class="clear"></div>
+               </form>
+                        
+                 <script>
+                            $("#reload_img").click(function(){
+                            $("#siimage").attr("src",$("#siimage").attr("src")+"?a");
+                            return false;
+                            
+});
+
+</script>
+        <div class="map" id="map_canvas"></div>
+        <div class="clear"></div>
+    </div>
+        <div class="pager">
+            
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+
+
+    <script>
+				     function init() {
+				                                               
+				    var myHtml = "<h4>Công ty cổ phần JVB Việt Nam</h4><p></p>";
+				                                                
+				      var map = new google.maps.Map(
+				      document.getElementById("map_canvas"),
+				      {scaleControl: true}
+				      );
+				      map.setCenter(new google.maps.LatLng(21.013428,105.833353));
+				      map.setZoom(17);
+				      map.setMapTypeId(google.maps.MapTypeId.ROADMAP);
+				      var marker = new google.maps.Marker({
+				      map: map,
+				      position:map.getCenter()
+						});
+						var infowindow = new google.maps.InfoWindow({
+						'pixelOffset': new google.maps.Size(0,15)
+							});
+				      infowindow.setContent(myHtml);
+				      infowindow.open(map, marker);
+				    						}
+				    		$(document).ready(function(){
+						init();
+				});
+    </script>
