@@ -28,8 +28,6 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
     <?php
         echo $this->Html->css('style');
         echo $this->Html->css('jquery.bxslider');
-        
-
         echo $this->fetch('meta');
         echo $this->fetch('css');
         echo $this->fetch('script');
@@ -42,21 +40,19 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
     ?>
 </head>
 <body>
-
-     <script type="text/javascript">
-
-$(document).ready(function(){
-$('.bxslider').bxSlider({
- speed: 700,
- mode: 'fade',
- infiniteLoop: true,
- hideControlOnEnd: true,
- controls: true,
- pager: false,
-auto: true
-});
-});
-</script>
+                 <script type="text/javascript">
+                    $(document).ready(function(){
+                    $('.bxslider').bxSlider({
+                        speed: 700,
+                            mode: 'fade',
+                            infiniteLoop: true,
+                            hideControlOnEnd: true,
+                            controls: true,
+                            pager: false,
+                            auto: true
+                            });
+                            });
+                     </script>
     <div id="container">
         
         <div id="header">
@@ -69,22 +65,22 @@ auto: true
         <input value="" name="keyword" class="key-word" type="text">
         <input type="button" value="Search">
     </form>
-    <script>
-        $(document).ready(function(){
-        $('.button_ss').click(function(){
-        var keyword=$('.key-word').val();
-        if(keyword==''){
-        $('.key-word').css({'border':'1px solid red'});
-        return false;
-        }
-        if(keyword.length<=3){
-        $('.key-word').css({'border':'1px solid red'});
-        return false;
-        }
-        $('#from_search').submit();
-        });
-        })
-    </script>
+                    <script>
+                        $(document).ready(function(){
+                        $('.button_ss').click(function(){
+                            var keyword=$('.key-word').val();
+                            if(keyword==''){
+                            $('.key-word').css({'border':'1px solid red'});
+                            return false;
+                            }
+                            if(keyword.length<=3){
+                            $('.key-word').css({'border':'1px solid red'});
+                                return false;
+                            }
+                            $('#from_search').submit();
+                            });
+                            })
+                    </script>
             
             <div class="lang">
                     <a href="<?php echo Router::url('/', true);?>">
@@ -100,22 +96,22 @@ auto: true
         <div class="menu_top">
             <ul>
                             
-                     <li class="active" ><a href="<?php echo $this->Html->url(array('controller' => 'index', 'action' => 'index')) ?>">Trang chủ</a></li>
+                     <li class="active" ><a href="<?php echo $this->Html->url(array('controller' => 'index', 'action' => 'index')) ?>"><?php echo __('Trang chủ');?></a></li>
                     
                             
-                    <li class="" ><a href="<?php echo $this->Html->url(array('controller' => 'about_us', 'action' => 'index')) ?>">Giới thiệu</a></li>
+                    <li class="" ><a href="<?php echo $this->Html->url(array('controller' => 'about_us', 'action' => 'index')) ?>"><?php echo __('Giới thiệu');?>Giới thiệu</a></li>
                 
                             
-                    <li class="" ><a href="<?php echo $this->Html->url(array('controller' => 'service', 'action' => 'index')) ?>">Dịch vụ</a></li>
+                    <li class="" ><a href="<?php echo $this->Html->url(array('controller' => 'service', 'action' => 'index')) ?>"><?php echo __('Dịch vụ');?></a></li>
                     
                             
-                    <li class="" ><a href="<?php echo $this->Html->url(array('controller' => 'news', 'action' => 'index')) ?>">Tin tức</a></li>
+                    <li class="" ><a href="<?php echo $this->Html->url(array('controller' => 'news', 'action' => 'index')) ?>"><?php echo __('Tin tức');?>Tin tức</a></li>
                     
                             
-                    <li class="" ><a href="<?php echo $this->Html->url(array('controller' => 'recruitment', 'action' => 'index')) ?>">Tuyển dụng</a></li>
+                    <li class="" ><a href="<?php echo $this->Html->url(array('controller' => 'recruitment', 'action' => 'index')) ?>"><?php echo __('Tuyển dụng');?></a></li>
                     
                             
-                    <li class="" ><a href="<?php echo $this->Html->url(array('controller' => 'contact_us', 'action' => 'index')) ?>">Liên hệ</a></li>
+                    <li class="" ><a href="<?php echo $this->Html->url(array('controller' => 'contact_us', 'action' => 'index')) ?>"><?php echo __('Liên hệ');?></a></li>
                     
                     <div class="clear"></div>
             </ul>
@@ -129,8 +125,8 @@ auto: true
             <div class="service_slide">
                 <div class="title"><?php echo __('Phát triển ứng dụng Mobile');?></div>
                 <?php echo __('Công ty chúng tôi cung cấp dịch vụ phát triển ứng dụng Mobile trên nền iOS và Android.
-Đội ngũ nhân viên của chúng tôi tư vấn và phát triển dựa trên nhu cầu thực tế của khách hàng.');?>
-<div class="readmore"><a href="#"><?php echo __('Xem thêm');?></a></div>
+                    Đội ngũ nhân viên của chúng tôi tư vấn và phát triển dựa trên nhu cầu thực tế của khách hàng.');?>
+            <div class="readmore"><a href="#"><?php echo __('Xem thêm');?></a></div>
                 </div>
                 <div class="im_slide">
                     <?php 
@@ -143,7 +139,7 @@ auto: true
             <div class="service_slide">
                 <div class="title"><?php echo __('Phát triển ứng dụng Web');?></div>
                <?php echo __('Công ty JVB Vietnam cung cấp dịch vụ thiết kế và phát triển ứng dụng Web');?>
-<div class="readmore"><a href="#"><?php echo __('Xem thêm');?></a></div>
+            <div class="readmore"><a href="#"><?php echo __('Xem thêm');?></a></div>
                 </div>
                 <div class="im_slide">
                     <?php 
@@ -156,7 +152,7 @@ auto: true
             <div class="service_slide">
                 <div class="title"><?php echo __('Nội dung số');?></div>
                 <?php echo __('Công ty JVB Vietnam số hóa thông tin về văn hóa, môi trường kinh doanh tại Việt Nam để quảng bá cho khách hàng Nhật');?>
-<div class="readmore"><a href=""><?php echo __('Xem thêm');?></a></div>
+                <div class="readmore"><a href=""><?php echo __('Xem thêm');?></a></div>
                 </div>
                 <div class="im_slide">
                     <?php 
