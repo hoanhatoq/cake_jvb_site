@@ -1,0 +1,54 @@
+<div class="service_block">
+<div class="wap_app_web">
+<div class="title_web_app"><?php echo __('Qui trình làm sản phẩm'); ?></div>
+<div class="m_w_a">
+<div  rel="ct_1" class="ls_tab tab1"><?php echo __('Website'); ?></div>
+<div  rel="ct_2" class="ls_tab tab2"><?php echo __('Ứng dụng'); ?></div>
+<div class="clear"></div>      
+<div  class="ct_d1 ct_1">   
+		<?php echo $this->Html->image(__('web_vi.png'));?>
+</div>
+<div  style="display:none;" class="ct_d1 ct_2">   
+	 <?php echo $this->Html->image(__('app_vi.png'));?>
+</div>
+</div>
+<div class="select_2">
+<div class="left_se">
+<div class="title_web_app"><?php echo __('Đặc điểm của công ty JVBvietnam'); ?></div>
+<div class="m_left">
+  <?php echo $this->Html->image(__('select_vi.png'));?>
+<div>
+
+</div>
+<div>
+
+</div>
+<div class="clear"></div>
+</div>
+</div>
+<div class="right_se">
+<div class="title_web_app"><?php echo __('Tin tức'); ?></div>
+<div class="news_home">
+        
+<div class="item">
+<a href="#"><img class="lazy" alt='' src='http://jvb-corp.com/sources/utils/timthumb.php?src=http://jvb-corp.com/uploads/.&w=85&h=68&zc=2'/></a>
+<h3><a href=""><?php echo $new[0]['Article']['title'];?> - <span>17/08/14</span></a></h3>
+<div class="intro"><p> <?php echo $new[0]['Article']['content'];?>
+</p></div>
+</div>
+<div class="clear"></div>
+        
+<div class="item">
+<a href="#"><img class="lazy" alt='' src='http://jvb-corp.com/sources/utils/timthumb.php?src=http://jvb-corp.com/uploads/.&w=85&h=68&zc=2'/></a>
+<h3><a href="<?php echo $this->Html->link($new[0]['Article']['content'],array ('Controller'=>'Articles' ,'action'=>'Getnew'),$new[0]['Article']['new_id'])  ;?>"><?php echo $new[1]['Article']['title'];?> - <span>17/08/14</span></a></h3>
+<div class="intro"><p><?php echo $new[1]['Article']['content'];?>
+</p></div>
+</div>
+<div class="clear"></div>
+
+</div>
+</div>
+</div>
+
+    <div class="clear"></div>
+</div>
