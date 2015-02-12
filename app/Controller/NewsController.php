@@ -19,6 +19,7 @@
 			$this->set ('new',$new);
 	
 			$lang_code = $this->params->language;
+		
 			if($lang_code == ''){
 				$lang_code = 'jp';
 			}
