@@ -15,8 +15,8 @@
 
 		public function index(){
 
-			$new = $this->News->find('all');
-			$this->set ('new',$new);
+			/*$new = $this->News->find('all');
+			$this->set ('new',$new);*/
 	
 			$lang_code = $this->params->language;
 		

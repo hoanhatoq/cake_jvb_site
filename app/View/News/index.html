@@ -13,58 +13,59 @@
         
         <div class="sitebar_item">
             <div class="lasted_title"><?php echo __('Tin nổi bật');?></div>
-                    
-                
                 <div class="lasted_top">
-                    <div class="title"><a href="#">
-                        <?php foreach ($data as $new) {
-                          if($new['t2']['title_content_id'] == 'nt1'){
-                            echo $new['t2']['value'];
-                        /*echo '<pre>';
-                        print_r($new) ;
-                        echo '</pre>';*/
-                          }
-                        
-                        } ;?></a></div>
+                    <?php foreach ($data as $id => $value): ?>
+                    <div class="title">
+                      <a href="#">
+                        <?php
+                          echo $value['title'];
+                        ?>
+                      </a>
+                    </div>
                     <div class="im">
                       <a href="#"><img class="lazy" alt='' src=''/></a>
                     </div>
                     <div class="intro">
-                       <?php foreach ($data as $new) {
-                          if($new['t2']['title_content_id'] == 'nc1'){
-                            echo $new['t2']['value'];
-                          }
-                        };?>
+                        <?php
+                          echo $value['content'];
+                        ?>
                     </div>
+                    <?php endforeach; ?>  
                 </div>         
-                <div class="lasted_item"><a href="#">
-                        <?php foreach ($data as $new){
-                           if($new['t2']['title_content_id'] == 'nc1'){
-                              echo $new['t2']['value'];
-                            }
-                        };?></a></div>      
+                <div class="lasted_item">
+                    <a href="#"> 
+                          <?php
+                            echo $value['title'];
+                          ?> 
+                    </a>
+                </div>  
+                          
         </div>
      </div>
     <div class="center">
                 
         <div class="news_item">
             <div class="im"><a href="#"><img class="lazy" alt='' src=''/></a></div>
-            <div class="title"><a href="#"><?php foreach ($data as $new) {
-                           if($new['t2']['title_content_id'] == 'nc1'){
-                            echo $new['t2']['value'];
-                           }
-                       };?><span> - 17/08/14</span></a></div>
-            <div class="intro">
-                <p><?php foreach ($data as $new) {
-                          if($new['t2']['title_content_id'] == 'nc1'){
-                            echo $new['t2']['value'];
-                          }
-                        }
-                    ;?>
-                </p>
+            <div class="title">
+              <a href="#"><?php foreach ($data as $id => $value): ?> 
+                          <?php
+                            echo $value['title'];
+                          ?>
+                  <span> - 17/08/14</span>
+              </a>
             </div>
+
+            <div class="intro">
+               <p>
+                <?php
+                  echo $value['content'];
+                ?>
+              </p>
+                  <?php endforeach; ?>  
+            </div>
+             
         </div>
-                
+              
         <div class="news_item">
             <div class="im"><a href="#"><img class="lazy" alt='' src=''/></a></div>
             <div class="title"><a href="#">Tuyển lập trình viên Mobile - <span>17/08/14</span></a></div>

@@ -17,35 +17,84 @@ App::uses('AppModel', 'Model');
 			}
 			
 			$sql = ('
-				select title_content_id,lang_code,value from news_tbl as t1 
-				INNER JOIN expresion_tbl as t2 
-				on t1.title_news_id = t2.title_content_id or t1.content_news_id =t2.title_content_id 
+				select * from news_tbl as News 
+				INNER JOIN expresion_tbl as Expresion 
+				on News.title_news_id = Expresion.title_content_id or News.content_news_id =Expresion.title_content_id 
 				WHERE lang_code = "'.$lang_code.'"');
 			/*$options = array(  
 				            
-	        	'joins' => array(
-	                array(
-	                    'table' => 'expresion_tbl',
-	                	'alias' => 'Expresion',
-	                    'type' => 'inner',
-	                    'foreignKey' => false,
-	                    'conditions'=> array(
-	                    	' News.title_news_id = Expresion.title_content_id ',
+	        	['joins'] => array(
+				                array(
+				                    'table' => 'expresion_tbl',
+				                	'alias' => 'Expresion',
+				                    'type' => 'inner',
+				                    'foreignKey' => false,
+				                    'conditions'=> array(
+					                    				'News.title_news_id = Expresion.title_content_id ',
 
-	                    	'News.content_news_id =  Expresion.title_content_id ',
-	                    	
-	                    ),
-	                ),
+					                    				'News.content_news_id =  Expresion.title_content_id ',
+					                    	
+				    									'Expresion.lang_code = vi'
+							
+				                    				),
+	                			),
 	                   
-	     		),
-	        	'conditions'=> array('Expresion.lang_code = vn')
-			);	*/
+	     					)
+	     		
+	        	
+			);*/
+			
+			
+
+			/*$private = $this->find('all', $options);
+			echo '<pre>';
+			print_r($private);
+			echo '</pre>';*/
 			// $this->recursive = -1;
 			// $coupons = $this->find('all', $options);
 			$coupons = $this->query($sql);
 
-			return $coupons;
+			/*echo '<pre>';
+			print_r($coupons);
+			echo '</pre>';*/
+			$news= array();
+			foreach ($coupons as $value){
+				/*echo $value['News']['news_id'];*/
+				//echo $value['News']['title_news_id'];
+				/*echo $value['Expresion']['value'];
+				echo '<pre>';
+				print_r($value);
+				echo '</pre>';*/
+				
+				$news_id = $value['News']['news_id'];
+				if($value['News']['title_news_id'] == $value['Expresion']['title_content_id']){
+					$news[$news_id]['title'] = $value['Expresion']['value'];
+					
+						
+				}
+				elseif ($value['News']['content_news_id'] == $value['Expresion']['title_content_id']) {
+					$news[$news_id]['content'] = $value['Expresion']['value'];
+					
+				}
+
+			}
+			/*$this->set('news',$news);*/
+			return $news;
+			/*echo '<pre>';
+			print_r($news);
+			echo '</pre>';*/
 			
-			
+			/*array(
+				'1' => array(
+					'title' => 'oung',
+					'content' => 'oasda das ung'
+				)
+				'2' => array(
+					'title' => 'oung',
+					'content' => 'oasda das ung'
+				)
+			);*/
+
+
 		}
 	}
