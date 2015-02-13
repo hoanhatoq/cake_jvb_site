@@ -14,22 +14,28 @@
 
 
 		public function index(){
-
-			/*$new = $this->News->find('all');
-			$this->set ('new',$new);*/
 	
 			$lang_code = $this->params->language;
 		
 			if($lang_code == ''){
-				$lang_code = 'jp';
+			   $lang_code = 'jp';
 			}
 
 			$data = $this->News->getAll($lang_code);
+			$this->set('data', $data);	
+		}
+
+		public function detaill($id = null){
+			$lang_code = $this->params->language;
+			$data = $this->News->getAll($lang_code);
 			$this->set('data', $data);
+			$news = $this->News->getNews($id,$lang_code);
+			$this->set('news',$news);
 			/*echo '<pre>';
-			print_r($data);
+			print_r($news);
 			echo '</pre>';*/
 			
 		}
+
 		    
 	}

@@ -1,84 +1,84 @@
-<meta charset="UTF-8">
-<div class="content">
-    <div class="sitebar">
-        <div class="sitebar_item">
-            <ul>
-                        
-                <li><a href="#">Danh muc 2</a></li>
-                        
-                <li><a href="#">Danh muc 1</a></li>
-                
-            </ul>
-        </div>
-        
-        <div class="sitebar_item">
-            <div class="lasted_title"><?php echo __('Tin nổi bật');?></div>
-                <div class="lasted_top">
-                    <?php foreach ($data as $id => $value): ?>
-                    <div class="title">
-                      <a href="#">
-                        <?php
-                          echo $value['title'];
-                        ?>
-                      </a>
-                    </div>
-                    <div class="im">
-                      <a href="#"><img class="lazy" alt='' src=''/></a>
-                    </div>
-                    <div class="intro">
-                        <?php
-                          echo $value['content'];
-                        ?>
-                    </div>
-                    <?php endforeach; ?>  
-                </div>         
-                <div class="lasted_item">
-                    <a href="#"> 
-                          <?php
-                            echo $value['title'];
-                          ?> 
-                    </a>
-                </div>  
-                          
-        </div>
-     </div>
-    <div class="center">
-                
-        <div class="news_item">
-            <div class="im"><a href="#"><img class="lazy" alt='' src=''/></a></div>
-            <div class="title">
-              <a href="#"><?php foreach ($data as $id => $value): ?> 
-                          <?php
-                            echo $value['title'];
-                          ?>
-                  <span> - 17/08/14</span>
-              </a>
-            </div>
+<div class="service_block">
+	<div class="wap_app_web">
+		<div class="title_web_app"><?php echo __('Qui trình làm sản phẩm'); ?></div>
+		<div class="m_w_a">
+			<div  rel="ct_1" class="ls_tab tab1"><?php echo __('Website'); ?></div>
+			<div  rel="ct_2" class="ls_tab tab2"><?php echo __('Ứng dụng'); ?></div>
+			<div class="clear"></div>      
+			<div  class="ct_d1 ct_1">   
+					<?php echo $this->Html->image(__('web_vi.png'));?>
+			</div>
+			<div  style="display:none;" class="ct_d1 ct_2">   
+				 <?php echo $this->Html->image(__('app_vi.png'));?>
+			</div>
+		</div>
+		<div class="select_2">
+			<div class="left_se">
+				<div class="title_web_app">
+					<?php echo __('Đặc điểm của công ty JVBvietnam');?>
+				</div>
+				<div class="m_left">
+					<?php echo $this->Html->image(__('select_vi.png'));?>
+				<div>
+					<p><?php echo __('Thăm trực tiếp, các cuộc họp'); ?></p>
+					<p><?php echo __('Nắm chính xác các yêu cầu của khách hàng,đề xuất ý tưởng'); ?></p>
+					<p><?php echo __('Đảm bảo an toàn'); ?></p>
+				</div>	
+				<div>
 
-            <div class="intro">
-               <p>
-                <?php
-                  echo $value['content'];
-                ?>
-              </p>
-                  <?php endforeach; ?>  
-            </div>
-             
-        </div>
-              
-        <div class="news_item">
-            <div class="im"><a href="#"><img class="lazy" alt='' src=''/></a></div>
-            <div class="title"><a href="#">Tuyển lập trình viên Mobile - <span>17/08/14</span></a></div>
-            <div class="intro">
-              <p>
-                <?php echo __('Công ty JVB Vietnam đang có nhu cầu tuyển lập trình viên Mobile có từ 1 năm  kinh nghiệm trở lên.');?>
-              </p>
-            </div>
-        </div>
-        
-        <div class="pager">
-            
-        </div>
-    </div>
-    <div class="clear"></div>
+					<?php echo __('Hợp tác chặt chẽ của phía Nhật Bản BSE và đội ngũ phát triển Việt Nam,đáng tin cậy, nhanh chóng hoàn thành sản phẩm.'); ?>
+
+				</div>	
+					<div class="clear"></div>
+				</div>
+			</div>
+			<div class="right_se">
+				<div class="title_web_app">
+					<?php echo __('Tin tức');?>
+				</div>
+				<div class="news_home">      
+					<div class="item">
+						<a href="#">
+							<img class="lazy" alt='' src=''/>
+						</a>
+						<h3>
+							<?php foreach ($data as $kid => $value) :?>
+							<a href="">
+								<?php echo $this->Html->link($value['title'],array('controller'=>'news','action'=>'detaill', $value['title_id']));?>
+
+
+								 - <span>17/08/14</span>
+							</a>
+
+						</h3>
+							<div class="intro">
+								<p> 
+								   <?php echo $value['content'];?>
+								</p>
+							</div>
+						</div>
+						<?php endforeach; ?>
+						<div class="clear"></div>      
+						<div class="item">
+							<a href="#">
+								<img class="lazy" alt='' src=''/>
+							</a>
+							<h3>
+								<a href="">
+									<?php echo $value['title'];?> - <span>17/08/14</span>
+								</a>
+							</h3>
+							<div class="intro">
+								<p>
+									<?php echo $value['content'];?>
+								</p>
+							</div>
+						</div>
+						<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+
 </div>

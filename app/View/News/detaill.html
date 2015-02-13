@@ -1,0 +1,75 @@
+<meta charset="UTF-8">
+<div class="content">
+    <div class="sitebar">
+        <div class="sitebar_item">
+            <ul>
+                        
+                <li><a href="#">Danh muc 2</a></li>
+                        
+                <li><a href="#">Danh muc 1</a></li>
+                
+            </ul>
+        </div>
+        
+        <div class="sitebar_item">
+            <div class="lasted_title"><?php echo __('Tin nổi bật');?></div>
+                 <div class="lasted_top">
+                    <?php foreach ($data as $id => $value): ?>
+                   
+                    <div class="title">
+                       <a href="#">
+                        <?php echo $this->Html->link($value['title'],array('controller'=>'news','action'=>'detaill', $value['title_id']));?> 
+                      </a>
+                    </div>
+      
+                    <div class="intro">
+                        <?php echo $value['content'];?>
+                    </div>
+                    <?php endforeach; ?>
+                </div>         
+                <div class="lasted_item">
+                   <?php foreach ($data as $id => $value) {
+                        
+                      };?>
+                    <a href="#"> 
+                      <?php 
+                        echo $this->Html->link($value['title'],array('controller'=>'news','action'=>'detaill', 
+                        $value['title_id']));
+                      ?>
+                      
+                    </a>
+                </div>  
+                
+            
+        </div>
+     </div>
+    <div class="center">
+
+        <div class="title_detail">
+            <?php echo $news['title'];?> - <span>17/08/14</span></div>
+
+        <p>
+            <?php echo $news['content'];?>
+            <!-- <span style="color: #000000;">C&ocirc;ng ty JVB Vietnam đang c&oacute; nhu cầu tuyển phi&ecirc;n dịch vi&ecirc;n tiếng Nhật c&oacute; tr&igrave;nh độ tương đương N2.</span><br /><span style="color: #000000;">Xin vui l&ograve;ng li&ecirc;n hệ để biết th&ecirc;m chi tiết.</span> -->
+        </p>
+           
+            <div class="other">
+                <div class="other_title">
+                    <a>
+                        <?php echo __('Tin liên quan');?>
+                    </a>
+                </div>
+                <ul>  
+                 <?php foreach ($data as $id => $value): ?>                            
+                    <li>   
+                     
+                           <?php echo $this->Html->link($value['title'],array('controller'=>'news','action'=>'detaill', $value['title_id']));?> 
+                        
+                    </li>
+                    <?php endforeach ;?>    
+                </ul>
+            </div>
+            
+    </div>
+    <div class="clear"></div>
+</div>
