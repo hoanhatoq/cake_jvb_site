@@ -19,15 +19,14 @@
     </div>
  
     <div class="center" id='content1'>
-        <div class="title_detail"><?php echo $detail['title']; ?></div>
+        <div class="title_detail"><?php echo (isset($detail['title']))? $detail['title']: ''; ?></div>
 
             
             <p>
                 <span style="color: #000000;">
-                    <?php //echo $list['content']; ?>
                     
                          <?php
-                            echo $detail['content'];
+                            echo (isset($detail['content']))? $detail['content']: '';;
                           ?>
 
                 </span>
@@ -55,30 +54,3 @@
 
     <div class="clear"></div>
 </div>
-
-<script type="text/javascript">
-/* $(document).ready(function () {
-     $("#content1").show();
-        $("#content2").hide();
-        $("#content3").hide();
- });
-     $(".title").click(function(){
-        $(".title").removeClass('active');
-        $(this).addClass('active');
-     });
-    $("#title1").click(function(){
-        $("#content1").show();
-        $("#content2").hide();
-        $("#content3").hide();
-    });
-     $("#title2").click(function(){
-         $("#content2").show();
-        $("#content1").hide();
-        $("#content3").hide();
-    });
-      $("#title3").click(function(){
-         $("#content3").show();
-        $("#content2").hide();
-        $("#content1").hide();
-    });*/
-</script>
