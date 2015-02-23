@@ -13,44 +13,36 @@
         
         <div class="sitebar_item">
             <div class="lasted_title"><?php echo __('Tin nổi bật');?></div>
-                 <div class="lasted_top">
-                    <?php foreach ($data as $id => $value): ?>
+                <div class="lasted_top">
+                    <?php foreach ($data as $value): ?>
                    
                     <div class="title">
-                       <a href="#">
+                       <a href="">
                         <?php echo $this->Html->link($value['title'],array('controller'=>'news','action'=>'detaill', $value['title_id']));?> 
                       </a>
                     </div>
       
                     <div class="intro">
-                        <?php echo $value['content'];?>
+                      
                     </div>
-                    <?php endforeach; ?>
+                 
                 </div>         
                 <div class="lasted_item">
-                   <?php foreach ($data as $id => $value) {
-                        
-                      };?>
-                    <a href="#"> 
-                      <?php 
-                        echo $this->Html->link($value['title'],array('controller'=>'news','action'=>'detaill', 
-                        $value['title_id']));
-                      ?>
-                      
-                    </a>
+                     <?php endforeach; ?>
+                    
+                    
                 </div>  
-                
-            
+                          
         </div>
      </div>
     <div class="center">
 
         <div class="title_detail">
-            <?php echo $news['title'];?> - <span>17/08/14</span></div>
+            <?php echo $news['title'];?></div>
 
         <p>
             <?php echo $news['content'];?>
-            <!-- <span style="color: #000000;">C&ocirc;ng ty JVB Vietnam đang c&oacute; nhu cầu tuyển phi&ecirc;n dịch vi&ecirc;n tiếng Nhật c&oacute; tr&igrave;nh độ tương đương N2.</span><br /><span style="color: #000000;">Xin vui l&ograve;ng li&ecirc;n hệ để biết th&ecirc;m chi tiết.</span> -->
+            
         </p>
            
             <div class="other">
@@ -60,10 +52,10 @@
                     </a>
                 </div>
                 <ul>  
-                 <?php foreach ($data as $id => $value): ?>                            
+                 <?php foreach ($data as $value1): ?>                            
                     <li>   
-                     
-                           <?php echo $this->Html->link($value['title'],array('controller'=>'news','action'=>'detaill', $value['title_id']));?> 
+                        <?php if ($news['title'] != $value1['title']){
+                            echo $this->Html->link($value1['title'],array('controller'=>'news','action'=>'detaill', $value1['title_id']));}?> 
                         
                     </li>
                     <?php endforeach ;?>    
